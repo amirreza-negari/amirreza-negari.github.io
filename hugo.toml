@@ -1,0 +1,97 @@
+baseURL = "http://localhost:1313/"
+title = "Amirreza Negari"
+theme = "PaperMod"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[params]
+  env = "development"
+  defaultTheme = "auto"
+  label.text = "Home"
+  label.iconSVG = """<svg class="home-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10.5 9-7 9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-6h5v6"/></svg>"""
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  displayFullLangName = true
+
+[languages]
+
+  [languages.en]
+    languageName = "EN"
+    languageCode = "en-us"
+    locale = "en-US"
+    contentDir = "content/en"
+    weight = 1
+    title = "Amirreza Negari"
+
+    [[languages.en.menu.main]]
+      identifier = "research"
+      name = "Research"
+      url = "/research/"
+      weight = 10
+
+    [[languages.en.menu.main]]
+      identifier = "papers"
+      name = "Papers"
+      url = "/papers/"
+      weight = 20
+
+    [[languages.en.menu.main]]
+      identifier = "collaborators"
+      name = "Collaborators"
+      url = "/collaborators/"
+      weight = 30
+
+    [[languages.en.menu.main]]
+      identifier = "cv"
+      name = "CV"
+      url = "/cv/"
+      weight = 40
+
+    [[languages.en.menu.main]]
+      identifier = "contact"
+      name = "Contact"
+      url = "/contact/"
+      weight = 50
+
+  [languages.fa]
+    languageName = "فارسی"
+    languageCode = "fa-ir"
+    locale = "fa-IR"
+    contentDir = "content/fa"
+    weight = 2
+    title = "Amirreza Negari"
+
+    [[languages.fa.menu.main]]
+      identifier = "research"
+      name = "پژوهش"
+      url = "/fa/research/"
+      weight = 10
+
+    [[languages.fa.menu.main]]
+      identifier = "papers"
+      name = "مقالات"
+      url = "/fa/papers/"
+      weight = 20
+
+    [[languages.fa.menu.main]]
+      identifier = "collaborators"
+      name = "همکاران"
+      url = "/fa/collaborators/"
+      weight = 30
+
+    [[languages.fa.menu.main]]
+      identifier = "cv"
+      name = "رزومه"
+      url = "/fa/cv/"
+      weight = 40
+
+    [[languages.fa.menu.main]]
+      identifier = "contact"
+      name = "تماس"
+      url = "/fa/contact/"
+      weight = 50

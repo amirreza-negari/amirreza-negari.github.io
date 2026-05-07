@@ -1,0 +1,311 @@
+{{ define "main" }}
+
+{{ $isFa := eq .Lang "fa" }}
+
+<section class="hero-grid">
+  <div class="hero-text">
+    {{ if $isFa }}
+      <div class="fa-bio">
+        <p class="eyebrow">فیزیک‌دان نظری</p>
+
+        <h1>امیررضا نگاری</h1>
+        <p class="persian-name">Amirreza Negari</p>
+
+        <p class="hero-subtitle">
+          من دانشجوی دکتری در Perimeter Institute هستم و در مرز میان اطلاعات کوانتومی،
+          ماده کوانتومی و فیزیک ماده چگال کار می‌کنم.
+        </p>
+
+        <p class="hero-description">
+          پژوهش من روی فازهای حالت آمیخته، پایداری در برابر خطا، پدیده‌های ناشی از
+          اندازه‌گیری، حافظه‌های کوانتومی، و نقش تقارن در ساختار درهم‌تنیدگی متمرکز است.
+        </p>
+      </div>
+    {{ else }}
+      <p class="eyebrow">Theoretical Physicist</p>
+
+      <h1>Amirreza Negari</h1>
+      <p class="persian-name">امیررضا نگاری</p>
+
+      <p class="hero-subtitle">
+        I am a PhD student working at the interface of quantum information,
+        quantum matter and error correction.
+      </p>
+
+      <p class="hero-description">
+        My research explores mixed-state phases of quantum memories, entanglement theory
+        and symmetry, learnability and decodability, and numerical approaches to quantum
+        many-body systems.
+      </p>
+    {{ end }}
+
+    <div class="hero-buttons">
+      <a href="{{ if $isFa }}/fa/research/{{ else }}/research/{{ end }}">Research</a>
+      <a href="{{ if $isFa }}/fa/papers/{{ else }}/papers/{{ end }}">Papers</a>
+      <a href="{{ if $isFa }}/fa/cv/{{ else }}/cv/{{ end }}">CV</a>
+    </div>
+
+    <div class="hero-links">
+      <a href="mailto:anegari@pitp.ca">Email</a>
+      <span>·</span>
+      <a href="https://github.com/Amirreza-negari">GitHub</a>
+      <span>·</span>
+      <a href="https://scholar.google.com/citations?user=_kyHGUcAAAAJ&hl=en">Google Scholar</a>
+      <span>·</span>
+      <a href="https://inspirehep.net/authors/2851625?ui-citation-summary=true">INSPIRE</a>
+      <span>·</span>
+      <a href="https://orcid.org/orcid-search/search?searchQuery=%22Amir-Reza%20Negari%22">ORCID</a>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <img class="profile-photo" src="/images/profile/profile.jpg" alt="Amirreza Negari">
+    <p>
+      PhD student at Perimeter Institute for Theoretical Physics.
+    </p>
+  </div>
+</section>
+
+<section class="section-block">
+  <div class="section-header">
+    <p class="eyebrow">Research</p>
+    <h2>Research Directions</h2>
+  </div>
+
+  <div class="focus-flip-grid">
+    <label class="focus-flip-card">
+      <input class="focus-card-toggle" type="checkbox" aria-label="Flip mixed-state phases and quantum memories card">
+      <span class="focus-card-inner">
+        <span class="focus-card-face focus-card-front">
+          <span class="research-figure focus-card-figure" aria-hidden="true">
+            <svg viewBox="0 0 220 150">
+              <g class="memory-code">
+                <path d="M46 27v96M72 27v96M98 27v96M124 27v96M150 27v96M176 27v96"></path>
+                <path d="M46 27h130M46 51h130M46 75h130M46 99h130M46 123h130"></path>
+                <circle cx="46" cy="27" r="3"></circle><circle cx="72" cy="27" r="3"></circle><circle cx="98" cy="27" r="3"></circle><circle cx="124" cy="27" r="3"></circle><circle cx="150" cy="27" r="3"></circle><circle cx="176" cy="27" r="3"></circle>
+                <circle cx="46" cy="51" r="3"></circle><circle cx="72" cy="51" r="3"></circle><circle cx="98" cy="51" r="3"></circle><circle cx="124" cy="51" r="3"></circle><circle cx="150" cy="51" r="3"></circle><circle cx="176" cy="51" r="3"></circle>
+                <circle cx="46" cy="75" r="3"></circle><circle cx="72" cy="75" r="3"></circle><circle cx="98" cy="75" r="3"></circle><circle cx="124" cy="75" r="3"></circle><circle cx="150" cy="75" r="3"></circle><circle cx="176" cy="75" r="3"></circle>
+                <circle cx="46" cy="99" r="3"></circle><circle cx="72" cy="99" r="3"></circle><circle cx="98" cy="99" r="3"></circle><circle cx="124" cy="99" r="3"></circle><circle cx="150" cy="99" r="3"></circle><circle cx="176" cy="99" r="3"></circle>
+                <circle cx="46" cy="123" r="3"></circle><circle cx="72" cy="123" r="3"></circle><circle cx="98" cy="123" r="3"></circle><circle cx="124" cy="123" r="3"></circle><circle cx="150" cy="123" r="3"></circle><circle cx="176" cy="123" r="3"></circle>
+              </g>
+              <g class="memory-decoder">
+                <path d="M72 51h26v24"></path>
+                <path d="M124 99h26"></path>
+                <path d="M150 51v24h26"></path>
+              </g>
+              <g class="memory-anyons">
+                <circle class="anyon" cx="72" cy="51" r="5.8"></circle>
+                <circle class="anyon" cx="98" cy="75" r="5.8"></circle>
+                <circle class="anyon" cx="124" cy="99" r="5.8"></circle>
+                <circle class="anyon" cx="150" cy="99" r="5.8"></circle>
+                <circle class="anyon" cx="150" cy="51" r="5.8"></circle>
+                <circle class="anyon" cx="176" cy="75" r="5.8"></circle>
+              </g>
+            </svg>
+          </span>
+          <span class="focus-card-title">Mixed-state phases and quantum memories</span>
+        </span>
+        <span class="focus-card-face focus-card-back">
+          <span class="focus-card-title">Mixed-state phases and quantum memories</span>
+          <span class="focus-card-copy">
+            Noisy topological memories can behave like many-body mixed states, where Markov length and conditional information reveal structure invisible to local observables.
+          </span>
+        </span>
+      </span>
+    </label>
+
+    <label class="focus-flip-card">
+      <input class="focus-card-toggle" type="checkbox" aria-label="Flip entanglement theory and symmetry card">
+      <span class="focus-card-inner">
+        <span class="focus-card-face focus-card-front">
+          <span class="research-figure focus-card-figure" aria-hidden="true">
+            <svg viewBox="0 0 220 150">
+              <path class="fermion-symmetry-line" d="M110 24v102"></path>
+              <path class="fermion-pair pair-soft" d="M70 45c17-16 63-16 80 0"></path>
+              <path class="fermion-pair" d="M60 76c24-24 76-24 100 0"></path>
+              <path class="fermion-pair pair-soft" d="M70 107c17 16 63 16 80 0"></path>
+              <circle class="majorana" cx="70" cy="45" r="6"></circle>
+              <circle class="majorana" cx="150" cy="45" r="6"></circle>
+              <circle class="majorana filled" cx="60" cy="76" r="6"></circle>
+              <circle class="majorana filled" cx="160" cy="76" r="6"></circle>
+              <circle class="majorana" cx="70" cy="107" r="6"></circle>
+              <circle class="majorana" cx="150" cy="107" r="6"></circle>
+            </svg>
+          </span>
+          <span class="focus-card-title">Entanglement theory and symmetry</span>
+        </span>
+        <span class="focus-card-face focus-card-back">
+          <span class="focus-card-title">Entanglement theory and symmetry</span>
+          <span class="focus-card-copy">
+            I study how symmetry, fermion parity, and superselection constraints shape entanglement, separability, and information-theoretic tasks.
+          </span>
+        </span>
+      </span>
+    </label>
+
+    <label class="focus-flip-card">
+      <input class="focus-card-toggle" type="checkbox" aria-label="Flip learnability and decodability card">
+      <span class="focus-card-inner">
+        <span class="focus-card-face focus-card-front">
+          <span class="research-figure focus-card-figure" aria-hidden="true">
+            <svg viewBox="0 0 220 150">
+              <g class="binary-data">
+                <rect x="45" y="30" width="130" height="90" rx="6"></rect>
+                <path d="M71 30v90M97 30v90M123 30v90M149 30v90"></path>
+                <path d="M45 48h130M45 66h130M45 84h130M45 102h130"></path>
+                <text x="58" y="43">0</text><text x="84" y="43">1</text><text x="110" y="43">0</text><text x="136" y="43">1</text><text x="162" y="43">1</text>
+                <text x="58" y="61">1</text><text x="84" y="61">0</text><text x="110" y="61">1</text><text x="136" y="61">0</text><text x="162" y="61">0</text>
+                <text x="58" y="79">0</text><text x="84" y="79">1</text><text x="110" y="79">1</text><text x="136" y="79">0</text><text x="162" y="79">1</text>
+                <text x="58" y="97">1</text><text x="84" y="97">1</text><text x="110" y="97">0</text><text x="136" y="97">1</text><text x="162" y="97">0</text>
+                <text x="58" y="115">0</text><text x="84" y="115">0</text><text x="110" y="115">1</text><text x="136" y="115">1</text><text x="162" y="115">0</text>
+              </g>
+            </svg>
+          </span>
+          <span class="focus-card-title">Learnability and decodability</span>
+        </span>
+        <span class="focus-card-face focus-card-back">
+          <span class="focus-card-title">Learnability and decodability</span>
+          <span class="focus-card-copy">
+            Some phases are distinguished by whether their information can be learned, decoded, or recovered efficiently from accessible data.
+          </span>
+        </span>
+      </span>
+    </label>
+
+    <label class="focus-flip-card">
+      <input class="focus-card-toggle" type="checkbox" aria-label="Flip quantum many-body numerics card">
+      <span class="focus-card-inner">
+        <span class="focus-card-face focus-card-front">
+          <span class="research-figure focus-card-figure" aria-hidden="true">
+            <svg class="coin-flip-icon" viewBox="0 0 800 800">
+              <path class="ket-frame" d="M125 150v500"></path>
+              <path class="ket-frame" d="M660 155l95 245-95 245"></path>
+              <rect x="205" y="500" width="72" height="150" rx="15" class="coin-flip-line"></rect>
+              <path class="coin-flip-line" d="M277 535 C318 510 350 462 365 398 C372 365 400 362 414 388 C430 419 413 468 386 506 L470 492 C505 487 531 504 532 530 C556 539 552 572 520 581 C533 604 508 629 475 621 C462 650 406 657 344 642 C313 635 294 623 277 616"></path>
+              <path class="coin-flip-thin" d="M386 506 C413 491 439 477 469 469"></path>
+              <path class="coin-flip-thin" d="M471 532 C500 526 522 532 532 548"></path>
+              <path class="coin-flip-thin" d="M466 577 C493 571 513 576 520 592"></path>
+              <path class="coin-flip-thin" d="M449 617 C471 614 489 617 499 628"></path>
+              <path class="coin-flip-thin" d="M462 346 C485 303 522 274 565 257"></path>
+              <path class="coin-flip-thin" d="M505 365 C528 321 562 294 605 277"></path>
+              <g transform="rotate(-15 565 225)">
+                <ellipse cx="565" cy="225" rx="70" ry="32" class="coin-flip-line"></ellipse>
+                <path class="coin-flip-thin" d="M497 235 C528 263 601 263 633 235"></path>
+              </g>
+            </svg>
+          </span>
+          <span class="focus-card-title">Quantum many-body numerics</span>
+        </span>
+        <span class="focus-card-face focus-card-back">
+          <span class="focus-card-title">Quantum many-body numerics</span>
+          <span class="focus-card-copy">
+            I use numerical tools such as quantum Monte Carlo, tensor networks, Gaussian methods, and high-performance simulation to study many-body systems.
+          </span>
+        </span>
+      </span>
+    </label>
+  </div>
+
+  <p class="more-link">
+    <a href="{{ if $isFa }}/fa/research/{{ else }}/research/{{ end }}">Read more about my research →</a>
+  </p>
+</section>
+
+<section class="section-block">
+  <div class="section-header">
+    <p class="eyebrow">Papers</p>
+    <h2>Current Papers</h2>
+  </div>
+
+  <div class="home-paper-grid">
+    <article class="home-paper-card">
+      <span class="home-paper-number">01</span>
+      <span class="home-paper-meta">Preprint · 2026</span>
+      <h3>Unlearnable phases of matter</h3>
+      <p>
+        With Tarun Advaith Kumar, Yijian Zou, Roger G. Melko, and Timothy H. Hsieh.
+      </p>
+      <a href="https://arxiv.org/abs/2602.11262">arXiv</a>
+    </article>
+
+    <article class="home-paper-card">
+      <span class="home-paper-number">02</span>
+      <span class="home-paper-meta">Preprint · 2026</span>
+      <h3>Critical non-equilibrium phases from noisy topological memories</h3>
+      <p>
+        With Subhayan Sahu, Jan Behrends, Benjamin Béri, and Timothy H. Hsieh.
+      </p>
+      <a href="https://arxiv.org/abs/2601.10792">arXiv</a>
+    </article>
+
+    <article class="home-paper-card">
+      <span class="home-paper-number">03</span>
+      <span class="home-paper-meta">Preprint · 2025</span>
+      <h3>Symmetry enforces entanglement at high temperatures</h3>
+      <p>
+        With Leonardo A. Lessa and Subhayan Sahu.
+      </p>
+      <a href="https://arxiv.org/abs/2508.20166">arXiv</a>
+    </article>
+
+    <article class="home-paper-card">
+      <span class="home-paper-number">04</span>
+      <span class="home-paper-meta">Preprint · 2025</span>
+      <h3>Extendibility of fermionic Gaussian states</h3>
+      <p>
+        With Farzin Salek.
+      </p>
+      <a href="https://arxiv.org/abs/2508.18532">arXiv</a>
+    </article>
+  </div>
+
+  <p class="more-link">
+    <a href="{{ if $isFa }}/fa/papers/{{ else }}/papers/{{ end }}">View all papers →</a>
+  </p>
+</section>
+
+<section class="section-block">
+  <div class="section-header">
+    <p class="eyebrow">Profile</p>
+    <h2>At a Glance</h2>
+  </div>
+
+  <div class="theme-grid">
+    <article class="theme-card">
+      <h3>Education</h3>
+      <p>
+        PhD student at Perimeter Institute. MSc at Perimeter Institute.
+        BSc from Sharif University of Technology.
+      </p>
+    </article>
+
+    <article class="theme-card">
+      <h3>Computation</h3>
+      <p>
+        Numerical work with tensor-network methods, quantum Monte Carlo, stabilizer
+        methods, Gaussian formalisms, and high-performance computing.
+      </p>
+    </article>
+
+    <article class="theme-card">
+      <h3>Teaching & Community</h3>
+      <p>
+        I care about clear physics teaching, mentoring, and research community-building,
+        from Olympiad instruction to graduate reading groups and student projects.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="contact-strip">
+  <div>
+    <h2>Contact</h2>
+    <p>
+      For research discussions, seminars, or collaboration inquiries, feel free to reach out.
+    </p>
+  </div>
+
+  <a href="mailto:anegari@pitp.ca">anegari@pitp.ca</a>
+</section>
+
+{{ end }}

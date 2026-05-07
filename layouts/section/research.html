@@ -1,0 +1,151 @@
+{{- define "main" }}
+
+{{- $directions := slice
+  (dict
+    "kicker" "Direction 01"
+    "title" "Mixed-state phases and quantum memories"
+    "summary" "I study noisy quantum memories as many-body mixed states. A recurring theme is that local observables can look short-ranged while information-theoretic quantities, such as conditional mutual information and Markov length, reveal hidden long-range structure relevant for fault tolerance."
+    "figure" "memory"
+    "papers" (slice
+      (dict "title" "Critical non-equilibrium phases from noisy topological memories" "url" "https://arxiv.org/abs/2601.10792")
+      (dict "title" "Spacetime Markov length: a diagnostic for fault tolerance via mixed-state phases" "url" "https://arxiv.org/abs/2412.00193")
+      (dict "title" "Measurement-induced phase transitions in the toric code" "url" "https://arxiv.org/abs/2307.02292")
+    )
+  )
+  (dict
+    "kicker" "Direction 02"
+    "title" "Entanglement theory and symmetry"
+    "summary" "I am interested in how symmetry and superselection constraints shape entanglement, separability, and information-processing tasks in many-body systems, especially in regimes where standard pure-state intuition is no longer enough."
+    "figure" "symmetry"
+    "papers" (slice
+      (dict "title" "Symmetry enforces entanglement at high temperatures" "url" "https://arxiv.org/abs/2508.20166")
+      (dict "title" "Extendibility of Fermionic Gaussian States" "url" "https://arxiv.org/abs/2508.18532")
+    )
+  )
+  (dict
+    "kicker" "Direction 03"
+    "title" "Learnability and decodability"
+    "summary" "I study when physical information can be learned, decoded, or represented efficiently from accessible data. This includes phases that are hard to learn from local data and diagnostics for when quantum memories admit local versus global recovery."
+    "figure" "learnability"
+    "papers" (slice
+      (dict "title" "Unlearnable phases of matter" "url" "https://arxiv.org/abs/2602.11262")
+      (dict "title" "Spacetime Markov length: a diagnostic for fault tolerance via mixed-state phases" "url" "https://arxiv.org/abs/2412.00193")
+    )
+  )
+  (dict
+    "kicker" "Direction 04"
+    "title" "Quantum many-body numerics"
+    "summary" "I also work on numerical approaches to strongly correlated quantum systems, including quantum Monte Carlo, fermionic criticality, and methods aimed at mitigating sign-problem obstructions."
+    "figure" "numerics"
+    "papers" (slice
+      (dict "title" "Chiral Ising Gross-Neveu criticality of a single Dirac cone" "url" "https://arxiv.org/abs/2112.09209")
+      (dict "title" "An Amelioration for the Sign Problem: Adiabatic Quantum Monte Carlo" "url" "https://arxiv.org/abs/2012.12911")
+    )
+  )
+-}}
+
+<section class="research-page">
+  <header class="page-header research-header">
+    {{- partial "breadcrumbs.html" . }}
+    <p class="eyebrow">Research</p>
+    <h1>Research Directions</h1>
+    <div class="post-description">
+      My work sits between quantum information, quantum matter, and error correction. The directions below group my papers by the questions they are trying to answer.
+    </div>
+  </header>
+
+  <div class="research-map">
+    {{- range $index, $direction := $directions }}
+    <article class="research-direction">
+      <div class="research-figure research-figure-{{ $direction.figure }}" aria-hidden="true">
+        {{- if eq $direction.figure "memory" }}
+        <svg viewBox="0 0 220 150">
+          <g class="memory-code">
+            <path d="M46 27v96M72 27v96M98 27v96M124 27v96M150 27v96M176 27v96"></path>
+            <path d="M46 27h130M46 51h130M46 75h130M46 99h130M46 123h130"></path>
+            <circle cx="46" cy="27" r="3"></circle><circle cx="72" cy="27" r="3"></circle><circle cx="98" cy="27" r="3"></circle><circle cx="124" cy="27" r="3"></circle><circle cx="150" cy="27" r="3"></circle><circle cx="176" cy="27" r="3"></circle>
+            <circle cx="46" cy="51" r="3"></circle><circle cx="72" cy="51" r="3"></circle><circle cx="98" cy="51" r="3"></circle><circle cx="124" cy="51" r="3"></circle><circle cx="150" cy="51" r="3"></circle><circle cx="176" cy="51" r="3"></circle>
+            <circle cx="46" cy="75" r="3"></circle><circle cx="72" cy="75" r="3"></circle><circle cx="98" cy="75" r="3"></circle><circle cx="124" cy="75" r="3"></circle><circle cx="150" cy="75" r="3"></circle><circle cx="176" cy="75" r="3"></circle>
+            <circle cx="46" cy="99" r="3"></circle><circle cx="72" cy="99" r="3"></circle><circle cx="98" cy="99" r="3"></circle><circle cx="124" cy="99" r="3"></circle><circle cx="150" cy="99" r="3"></circle><circle cx="176" cy="99" r="3"></circle>
+            <circle cx="46" cy="123" r="3"></circle><circle cx="72" cy="123" r="3"></circle><circle cx="98" cy="123" r="3"></circle><circle cx="124" cy="123" r="3"></circle><circle cx="150" cy="123" r="3"></circle><circle cx="176" cy="123" r="3"></circle>
+          </g>
+          <g class="memory-decoder">
+            <path d="M72 51h26v24"></path>
+            <path d="M124 99h26"></path>
+            <path d="M150 51v24h26"></path>
+          </g>
+          <g class="memory-anyons">
+            <circle class="anyon" cx="72" cy="51" r="5.8"></circle>
+            <circle class="anyon" cx="98" cy="75" r="5.8"></circle>
+            <circle class="anyon" cx="124" cy="99" r="5.8"></circle>
+            <circle class="anyon" cx="150" cy="99" r="5.8"></circle>
+            <circle class="anyon" cx="150" cy="51" r="5.8"></circle>
+            <circle class="anyon" cx="176" cy="75" r="5.8"></circle>
+          </g>
+        </svg>
+        {{- else if eq $direction.figure "symmetry" }}
+        <svg viewBox="0 0 220 150">
+          <path class="fermion-symmetry-line" d="M110 24v102"></path>
+          <path class="fermion-pair pair-soft" d="M70 45c17-16 63-16 80 0"></path>
+          <path class="fermion-pair" d="M60 76c24-24 76-24 100 0"></path>
+          <path class="fermion-pair pair-soft" d="M70 107c17 16 63 16 80 0"></path>
+          <circle class="majorana" cx="70" cy="45" r="6"></circle>
+          <circle class="majorana" cx="150" cy="45" r="6"></circle>
+          <circle class="majorana filled" cx="60" cy="76" r="6"></circle>
+          <circle class="majorana filled" cx="160" cy="76" r="6"></circle>
+          <circle class="majorana" cx="70" cy="107" r="6"></circle>
+          <circle class="majorana" cx="150" cy="107" r="6"></circle>
+        </svg>
+        {{- else if eq $direction.figure "learnability" }}
+        <svg viewBox="0 0 220 150">
+          <g class="binary-data">
+            <rect x="45" y="30" width="130" height="90" rx="6"></rect>
+            <path d="M71 30v90M97 30v90M123 30v90M149 30v90"></path>
+            <path d="M45 48h130M45 66h130M45 84h130M45 102h130"></path>
+            <text x="58" y="43">0</text><text x="84" y="43">1</text><text x="110" y="43">0</text><text x="136" y="43">1</text><text x="162" y="43">1</text>
+            <text x="58" y="61">1</text><text x="84" y="61">0</text><text x="110" y="61">1</text><text x="136" y="61">0</text><text x="162" y="61">0</text>
+            <text x="58" y="79">0</text><text x="84" y="79">1</text><text x="110" y="79">1</text><text x="136" y="79">0</text><text x="162" y="79">1</text>
+            <text x="58" y="97">1</text><text x="84" y="97">1</text><text x="110" y="97">0</text><text x="136" y="97">1</text><text x="162" y="97">0</text>
+            <text x="58" y="115">0</text><text x="84" y="115">0</text><text x="110" y="115">1</text><text x="136" y="115">1</text><text x="162" y="115">0</text>
+          </g>
+        </svg>
+        {{- else }}
+        <svg class="coin-flip-icon" viewBox="0 0 800 800">
+          <path class="ket-frame" d="M125 150v500"></path>
+          <path class="ket-frame" d="M660 155l95 245-95 245"></path>
+          <rect x="205" y="500" width="72" height="150" rx="15" class="coin-flip-line"></rect>
+          <path
+            class="coin-flip-line"
+            d="M277 535 C318 510 350 462 365 398 C372 365 400 362 414 388 C430 419 413 468 386 506 L470 492 C505 487 531 504 532 530 C556 539 552 572 520 581 C533 604 508 629 475 621 C462 650 406 657 344 642 C313 635 294 623 277 616"
+          ></path>
+          <path class="coin-flip-thin" d="M386 506 C413 491 439 477 469 469"></path>
+          <path class="coin-flip-thin" d="M471 532 C500 526 522 532 532 548"></path>
+          <path class="coin-flip-thin" d="M466 577 C493 571 513 576 520 592"></path>
+          <path class="coin-flip-thin" d="M449 617 C471 614 489 617 499 628"></path>
+          <path class="coin-flip-thin" d="M462 346 C485 303 522 274 565 257"></path>
+          <path class="coin-flip-thin" d="M505 365 C528 321 562 294 605 277"></path>
+          <g transform="rotate(-15 565 225)">
+            <ellipse cx="565" cy="225" rx="70" ry="32" class="coin-flip-line"></ellipse>
+            <path class="coin-flip-thin" d="M497 235 C528 263 601 263 633 235"></path>
+          </g>
+        </svg>
+        {{- end }}
+      </div>
+
+      <div class="research-body">
+        <p class="eyebrow">{{ $direction.kicker }}</p>
+        <h2>{{ $direction.title }}</h2>
+        <p>{{ $direction.summary }}</p>
+        <div class="research-papers">
+          <span>Related papers</span>
+          {{- range $direction.papers }}
+          <a href="{{ .url }}">{{ .title }}</a>
+          {{- end }}
+        </div>
+      </div>
+    </article>
+    {{- end }}
+  </div>
+</section>
+
+{{- end }}
