@@ -7,7 +7,7 @@ defaultContentLanguageInSubdir = false
 
 [params]
   env = "development"
-  defaultTheme = "auto"
+  defaultTheme = "dark"
   label.text = "Home"
   label.iconSVG = """<svg class="home-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10.5 9-7 9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-6h5v6"/></svg>"""
   ShowReadingTime = false
@@ -21,8 +21,7 @@ defaultContentLanguageInSubdir = false
 [languages]
 
   [languages.en]
-    languageName = "EN"
-    languageCode = "en-us"
+    label = "EN"
     locale = "en-US"
     contentDir = "content/en"
     weight = 1
@@ -59,9 +58,9 @@ defaultContentLanguageInSubdir = false
       weight = 50
 
   [languages.fa]
-    languageName = "فارسی"
-    languageCode = "fa-ir"
+    label = "فارسی"
     locale = "fa-IR"
+    direction = "rtl"
     contentDir = "content/fa"
     weight = 2
     title = "Amirreza Negari"

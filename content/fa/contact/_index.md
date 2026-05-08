@@ -1,14 +1,14 @@
 ---
-title: "Contact"
+title: "تماس"
 ---
 
-For research discussions, seminar invitations, or collaboration inquiries, email is the best way to reach me.
+از دریافت ایمیل، چه درباره‌ی موضوعات پژوهشی و چه غیرپژوهشی، استقبال می‌کنم. می‌توانید هر فکر تازه یا جالبی را که در ذهن دارید، از تاریخ و سیاست گرفته تا هوش مصنوعی و زبان‌شناسی، به این آدرس برایم بفرستید.
 
-## Email
+## ایمیل
 
 [anegari@pitp.ca](mailto:anegari@pitp.ca)
 
-## Profiles
+## نمایه‌ها
 
 - [Google Scholar](https://scholar.google.com/citations?user=_kyHGUcAAAAJ&hl=en)
 - [INSPIRE-HEP](https://inspirehep.net/authors/2851625?ui-citation-summary=true)
@@ -16,7 +16,7 @@ For research discussions, seminar invitations, or collaboration inquiries, email
 - [ORCID](https://orcid.org/orcid-search/search?searchQuery=%22Amir-Reza%20Negari%22)
 - [arXiv](https://arxiv.org/search/?query=Amir-Reza+Negari&searchtype=author)
 
-## Affiliation
+## وابستگی سازمانی
 
-Perimeter Institute for Theoretical Physics  
-Waterloo, Ontario, Canada
+موسسه فیزیک نظری پریمیتر  
+واترلو، انتاریو، کانادا

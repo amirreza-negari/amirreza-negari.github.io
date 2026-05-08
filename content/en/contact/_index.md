@@ -2,7 +2,7 @@
 title: "Contact"
 ---
 
-For research discussions, seminar invitations, or collaboration inquiries, email is the best way to reach me.
+For research discussions, email is the best way to reach me.
 
 ## Email
 

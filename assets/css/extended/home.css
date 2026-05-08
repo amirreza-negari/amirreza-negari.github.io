@@ -170,6 +170,10 @@ h3 {
   margin-bottom: 1rem;
 }
 
+html[lang="fa"] .profile-photo {
+  transform: scaleX(-1);
+}
+
 .hero-card p {
   color: var(--secondary);
   font-size: 0.94rem;
@@ -305,6 +309,10 @@ h3 {
   gap: 1rem;
 }
 
+.glance-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .theme-card {
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -312,10 +320,61 @@ h3 {
   background: var(--quiet-surface);
 }
 
+.path-card {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(340px, 1fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: center;
+  padding: clamp(1.2rem, 2.8vw, 1.8rem);
+}
+
 .theme-card p {
   color: var(--secondary);
   line-height: 1.68;
   margin-bottom: 0;
+}
+
+.path-card-copy p {
+  max-width: 560px;
+}
+
+.path-figure {
+  min-width: 0;
+}
+
+.path-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.path-line {
+  fill: none;
+  stroke: var(--soft-border);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.path-stop circle {
+  fill: var(--entry);
+  stroke: var(--primary);
+  stroke-width: 2;
+}
+
+.path-stop text {
+  fill: var(--primary);
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 800;
+  text-anchor: middle;
+}
+
+.path-stop .path-detail {
+  fill: var(--secondary);
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .focus-flip-grid {
@@ -1444,6 +1503,20 @@ h3 {
 
   .theme-grid {
     grid-template-columns: 1fr;
+  }
+
+  .path-card {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .path-stop text {
+    font-size: 14px;
+  }
+
+  .path-stop .path-detail {
+    font-size: 11px;
   }
 
   .focus-flip-grid {

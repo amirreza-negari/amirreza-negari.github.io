@@ -1,46 +1,47 @@
 {{- define "main" }}
+{{ $isFa := eq .Lang "fa" }}
 
 <section class="contact-page">
   <header class="page-header contact-header">
     {{- partial "breadcrumbs.html" . }}
-    <p class="eyebrow">Get in touch</p>
-    <h1>Contact</h1>
+    <p class="eyebrow">{{ if $isFa }}در تماس باشید{{ else }}Get in touch{{ end }}</p>
+    <h1>{{ if $isFa }}تماس{{ else }}Contact{{ end }}</h1>
     <div class="post-description">
-      For research discussions, seminar invitations, or collaboration inquiries, email is the best way to reach me.
+      {{ if $isFa }}از دریافت ایمیل، چه درباره‌ی موضوعات پژوهشی و چه غیرپژوهشی، استقبال می‌کنم. می‌توانید هر فکر تازه یا جالبی را که در ذهن دارید، از تاریخ و سیاست گرفته تا هوش مصنوعی و زبان‌شناسی، به این آدرس برایم بفرستید.{{ else }}For research discussions, email is the best way to reach me.{{ end }}
     </div>
   </header>
 
   <div class="contact-hero-card">
-    <span>Email</span>
+    <span>{{ if $isFa }}ایمیل{{ else }}Email{{ end }}</span>
     <a href="mailto:anegari@pitp.ca">anegari@pitp.ca</a>
-    <p>Office 354, Perimeter Institute for Theoretical Physics, Waterloo, Ontario, Canada</p>
+    <p>{{ if $isFa }}دفتر ۳۵۴، موسسه فیزیک نظری پریمیتر، واترلو، انتاریو، کانادا{{ else }}Office 354, Perimeter Institute for Theoretical Physics, Waterloo, Ontario, Canada{{ end }}</p>
   </div>
 
   <div class="contact-grid">
     <a href="https://scholar.google.com/citations?user=_kyHGUcAAAAJ&hl=en">
-      <span>Scholar</span>
+      <span>{{ if $isFa }}اسکالر{{ else }}Scholar{{ end }}</span>
       <strong>Google Scholar</strong>
-      <p>Citations and publication profile</p>
+      <p>{{ if $isFa }}نمایه ارجاع‌ها و انتشارها{{ else }}Citations and publication profile{{ end }}</p>
     </a>
     <a href="https://inspirehep.net/authors/2851625?ui-citation-summary=true">
       <span>HEP</span>
       <strong>INSPIRE-HEP</strong>
-      <p>High-energy physics author profile</p>
+      <p>{{ if $isFa }}نمایه نویسنده در فیزیک انرژی‌های بالا{{ else }}High-energy physics author profile{{ end }}</p>
     </a>
     <a href="https://github.com/Amirreza-negari">
-      <span>Code</span>
+      <span>{{ if $isFa }}کد{{ else }}Code{{ end }}</span>
       <strong>GitHub</strong>
-      <p>Selected code and research tools</p>
+      <p>{{ if $isFa }}کدها و ابزارهای پژوهشی منتخب{{ else }}Selected code and research tools{{ end }}</p>
     </a>
     <a href="https://orcid.org/orcid-search/search?searchQuery=%22Amir-Reza%20Negari%22">
-      <span>ID</span>
+      <span>{{ if $isFa }}شناسه{{ else }}ID{{ end }}</span>
       <strong>ORCID</strong>
-      <p>Researcher identifier search</p>
+      <p>{{ if $isFa }}جست‌وجوی شناسه پژوهشگر{{ else }}Researcher identifier search{{ end }}</p>
     </a>
     <a href="https://arxiv.org/search/?query=Amir-Reza+Negari&searchtype=author">
-      <span>Preprints</span>
+      <span>{{ if $isFa }}پیش‌چاپ‌ها{{ else }}Preprints{{ end }}</span>
       <strong>arXiv</strong>
-      <p>Author search on arXiv</p>
+      <p>{{ if $isFa }}جست‌وجوی نویسنده در arXiv{{ else }}Author search on arXiv{{ end }}</p>
     </a>
   </div>
 </section>

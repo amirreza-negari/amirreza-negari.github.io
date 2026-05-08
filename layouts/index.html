@@ -9,23 +9,22 @@
         <p class="eyebrow">فیزیک‌دان نظری</p>
 
         <h1>امیررضا نگاری</h1>
-        <p class="persian-name">Amirreza Negari</p>
 
         <p class="hero-subtitle">
-          من دانشجوی دکتری در Perimeter Institute هستم و در مرز میان اطلاعات کوانتومی،
-          ماده کوانتومی و فیزیک ماده چگال کار می‌کنم.
+          من دانشجوی دکتری در موسسه فیزیک نظری پریمیتر هستم و در مرز میان
+          اطلاعات کوانتومی، ماده کوانتومی و تصحیح خطای کوانتومی پژوهش می‌کنم.
         </p>
 
         <p class="hero-description">
-          پژوهش من روی فازهای حالت آمیخته، پایداری در برابر خطا، پدیده‌های ناشی از
-          اندازه‌گیری، حافظه‌های کوانتومی، و نقش تقارن در ساختار درهم‌تنیدگی متمرکز است.
+          در کارم، ایده‌های تحلیلی را با ابزارهای عددی ترکیب می‌کنم تا فیزیکِ اطلاعات
+          و ماده کوانتومی را بهتر بفهمم؛ از تصحیح خطا و حافظه‌های کوانتومی گرفته تا
+          نظریه درهم‌تنیدگی، قابلیت کدگشایی و قابلیت یادگیری.
         </p>
       </div>
     {{ else }}
       <p class="eyebrow">Theoretical Physicist</p>
 
       <h1>Amirreza Negari</h1>
-      <p class="persian-name">امیررضا نگاری</p>
 
       <p class="hero-subtitle">
         I am a PhD student working at the interface of quantum information,
@@ -33,43 +32,43 @@
       </p>
 
       <p class="hero-description">
-        My research explores mixed-state phases of quantum memories, entanglement theory
-        and symmetry, learnability and decodability, and numerical approaches to quantum
-        many-body systems.
+        My work combines analytic ideas with numerical tools to understand the physics of
+        information and matter, from error correction and quantum memories to entanglement
+        theory, decodability, and learnability.
       </p>
     {{ end }}
 
     <div class="hero-buttons">
-      <a href="{{ if $isFa }}/fa/research/{{ else }}/research/{{ end }}">Research</a>
-      <a href="{{ if $isFa }}/fa/papers/{{ else }}/papers/{{ end }}">Papers</a>
-      <a href="{{ if $isFa }}/fa/cv/{{ else }}/cv/{{ end }}">CV</a>
+      <a href="{{ if $isFa }}/fa/research/{{ else }}/research/{{ end }}">{{ if $isFa }}پژوهش{{ else }}Research{{ end }}</a>
+      <a href="{{ if $isFa }}/fa/papers/{{ else }}/papers/{{ end }}">{{ if $isFa }}مقاله‌ها{{ else }}Papers{{ end }}</a>
+      <a href="{{ if $isFa }}/fa/cv/{{ else }}/cv/{{ end }}">{{ if $isFa }}رزومه{{ else }}CV{{ end }}</a>
     </div>
 
     <div class="hero-links">
-      <a href="mailto:anegari@pitp.ca">Email</a>
+      <a href="mailto:anegari@pitp.ca">{{ if $isFa }}ایمیل{{ else }}Email{{ end }}</a>
       <span>·</span>
-      <a href="https://github.com/Amirreza-negari">GitHub</a>
+      <a href="https://github.com/Amirreza-negari">{{ if $isFa }}گیتهاب{{ else }}GitHub{{ end }}</a>
       <span>·</span>
-      <a href="https://scholar.google.com/citations?user=_kyHGUcAAAAJ&hl=en">Google Scholar</a>
+      <a href="https://scholar.google.com/citations?user=_kyHGUcAAAAJ&hl=en">{{ if $isFa }}گوگل اسکالر{{ else }}Google Scholar{{ end }}</a>
       <span>·</span>
-      <a href="https://inspirehep.net/authors/2851625?ui-citation-summary=true">INSPIRE</a>
+      <a href="https://inspirehep.net/authors/2851625?ui-citation-summary=true">{{ if $isFa }}این‌اسپایر{{ else }}INSPIRE{{ end }}</a>
       <span>·</span>
-      <a href="https://orcid.org/orcid-search/search?searchQuery=%22Amir-Reza%20Negari%22">ORCID</a>
+      <a href="https://orcid.org/orcid-search/search?searchQuery=%22Amir-Reza%20Negari%22">{{ if $isFa }}ارکید{{ else }}ORCID{{ end }}</a>
     </div>
   </div>
 
   <div class="hero-card">
     <img class="profile-photo" src="/images/profile/profile.jpg" alt="Amirreza Negari">
     <p>
-      PhD student at Perimeter Institute for Theoretical Physics.
+      {{ if $isFa }}دانشجوی دکتری در موسسه فیزیک نظری پریمیتر.{{ else }}PhD student at Perimeter Institute for Theoretical Physics.{{ end }}
     </p>
   </div>
 </section>
 
 <section class="section-block">
   <div class="section-header">
-    <p class="eyebrow">Research</p>
-    <h2>Research Directions</h2>
+    <p class="eyebrow">{{ if $isFa }}پژوهش{{ else }}Research{{ end }}</p>
+    <h2>{{ if $isFa }}مسیرهای پژوهشی{{ else }}Research Directions{{ end }}</h2>
   </div>
 
   <div class="focus-flip-grid">
@@ -103,12 +102,18 @@
               </g>
             </svg>
           </span>
-          <span class="focus-card-title">Mixed-state phases and quantum memories</span>
+          <span class="focus-card-title">{{ if $isFa }}فازهای حالت آمیخته و حافظه‌های کوانتومی{{ else }}Mixed-state phases and quantum memories{{ end }}</span>
         </span>
         <span class="focus-card-face focus-card-back">
-          <span class="focus-card-title">Mixed-state phases and quantum memories</span>
+          <span class="focus-card-title">{{ if $isFa }}فازهای حالت آمیخته و حافظه‌های کوانتومی{{ else }}Mixed-state phases and quantum memories{{ end }}</span>
           <span class="focus-card-copy">
-            Noisy topological memories can behave like many-body mixed states, where Markov length and conditional information reveal structure invisible to local observables.
+            {{ if $isFa }}
+              حافظه‌های توپولوژیک در حضور نویز را می‌توان به‌مثابه حالت‌های آمیخته‌ی
+              بس‌ذره‌ای توصیف کرد؛ جایی که کمیت‌هایی مانند طول مارکوفی و اطلاعات شرطی،
+              ساختارهایی را آشکار می‌کنند که از دید مشاهده‌پذیرهای موضعی پنهان می‌مانند.
+            {{ else }}
+              Noisy topological memories can behave like many-body mixed states, where Markov length and conditional information reveal structure invisible to local observables.
+            {{ end }}
           </span>
         </span>
       </span>
@@ -132,12 +137,18 @@
               <circle class="majorana" cx="150" cy="107" r="6"></circle>
             </svg>
           </span>
-          <span class="focus-card-title">Entanglement theory and symmetry</span>
+          <span class="focus-card-title">{{ if $isFa }}نظریه‌ی درهم‌تنیدگی و تقارن{{ else }}Entanglement theory and symmetry{{ end }}</span>
         </span>
         <span class="focus-card-face focus-card-back">
-          <span class="focus-card-title">Entanglement theory and symmetry</span>
+          <span class="focus-card-title">{{ if $isFa }}نظریه‌ی درهم‌تنیدگی و تقارن{{ else }}Entanglement theory and symmetry{{ end }}</span>
           <span class="focus-card-copy">
-            I study how symmetry, fermion parity, and superselection constraints shape entanglement, separability, and information-theoretic tasks.
+            {{ if $isFa }}
+              در پژوهش‌های خود بررسی می‌کنم که چگونه تقارن، زوجیت فرمیونی و محدودیت‌های
+              ابرگزینش بر ساختار درهم‌تنیدگی، تفکیک‌پذیری، و وظایف اطلاعات‌نظری اثر
+              می‌گذارند.
+            {{ else }}
+              I study how symmetry, fermion parity, and superselection constraints shape entanglement, separability, and information-theoretic tasks.
+            {{ end }}
           </span>
         </span>
       </span>
@@ -153,20 +164,25 @@
                 <rect x="45" y="30" width="130" height="90" rx="6"></rect>
                 <path d="M71 30v90M97 30v90M123 30v90M149 30v90"></path>
                 <path d="M45 48h130M45 66h130M45 84h130M45 102h130"></path>
-                <text x="58" y="43">0</text><text x="84" y="43">1</text><text x="110" y="43">0</text><text x="136" y="43">1</text><text x="162" y="43">1</text>
-                <text x="58" y="61">1</text><text x="84" y="61">0</text><text x="110" y="61">1</text><text x="136" y="61">0</text><text x="162" y="61">0</text>
-                <text x="58" y="79">0</text><text x="84" y="79">1</text><text x="110" y="79">1</text><text x="136" y="79">0</text><text x="162" y="79">1</text>
-                <text x="58" y="97">1</text><text x="84" y="97">1</text><text x="110" y="97">0</text><text x="136" y="97">1</text><text x="162" y="97">0</text>
-                <text x="58" y="115">0</text><text x="84" y="115">0</text><text x="110" y="115">1</text><text x="136" y="115">1</text><text x="162" y="115">0</text>
+                <text x="58" y="43">{{ if $isFa }}۰{{ else }}0{{ end }}</text><text x="84" y="43">{{ if $isFa }}۱{{ else }}1{{ end }}</text><text x="110" y="43">{{ if $isFa }}۰{{ else }}0{{ end }}</text><text x="136" y="43">{{ if $isFa }}۱{{ else }}1{{ end }}</text><text x="162" y="43">{{ if $isFa }}۱{{ else }}1{{ end }}</text>
+                <text x="58" y="61">{{ if $isFa }}۱{{ else }}1{{ end }}</text><text x="84" y="61">{{ if $isFa }}۰{{ else }}0{{ end }}</text><text x="110" y="61">{{ if $isFa }}۱{{ else }}1{{ end }}</text><text x="136" y="61">{{ if $isFa }}۰{{ else }}0{{ end }}</text><text x="162" y="61">{{ if $isFa }}۰{{ else }}0{{ end }}</text>
+                <text x="58" y="79">{{ if $isFa }}۰{{ else }}0{{ end }}</text><text x="84" y="79">{{ if $isFa }}۱{{ else }}1{{ end }}</text><text x="110" y="79">{{ if $isFa }}۱{{ else }}1{{ end }}</text><text x="136" y="79">{{ if $isFa }}۰{{ else }}0{{ end }}</text><text x="162" y="79">{{ if $isFa }}۱{{ else }}1{{ end }}</text>
+                <text x="58" y="97">{{ if $isFa }}۱{{ else }}1{{ end }}</text><text x="84" y="97">{{ if $isFa }}۱{{ else }}1{{ end }}</text><text x="110" y="97">{{ if $isFa }}۰{{ else }}0{{ end }}</text><text x="136" y="97">{{ if $isFa }}۱{{ else }}1{{ end }}</text><text x="162" y="97">{{ if $isFa }}۰{{ else }}0{{ end }}</text>
+                <text x="58" y="115">{{ if $isFa }}۰{{ else }}0{{ end }}</text><text x="84" y="115">{{ if $isFa }}۰{{ else }}0{{ end }}</text><text x="110" y="115">{{ if $isFa }}۱{{ else }}1{{ end }}</text><text x="136" y="115">{{ if $isFa }}۱{{ else }}1{{ end }}</text><text x="162" y="115">{{ if $isFa }}۰{{ else }}0{{ end }}</text>
               </g>
             </svg>
           </span>
-          <span class="focus-card-title">Learnability and decodability</span>
+          <span class="focus-card-title">{{ if $isFa }}یادگیری‌پذیری و رمزگشایی‌پذیری{{ else }}Learnability and decodability{{ end }}</span>
         </span>
         <span class="focus-card-face focus-card-back">
-          <span class="focus-card-title">Learnability and decodability</span>
+          <span class="focus-card-title">{{ if $isFa }}یادگیری‌پذیری و رمزگشایی‌پذیری{{ else }}Learnability and decodability{{ end }}</span>
           <span class="focus-card-copy">
-            Some phases are distinguished by whether their information can be learned, decoded, or recovered efficiently from accessible data.
+            {{ if $isFa }}
+              برخی فازها را می‌توان بر اساس این‌که اطلاعات آن‌ها تا چه حد از داده‌های در
+              دسترس قابل یادگیری، رمزگشایی یا بازیابیِ کارآمد است، از یکدیگر متمایز کرد.
+            {{ else }}
+              Some phases are distinguished by whether their information can be learned, decoded, or recovered efficiently from accessible data.
+            {{ end }}
           </span>
         </span>
       </span>
@@ -194,12 +210,18 @@
               </g>
             </svg>
           </span>
-          <span class="focus-card-title">Quantum many-body numerics</span>
+          <span class="focus-card-title">{{ if $isFa }}محاسبات عددی در سامانه‌های کوانتومی بس‌ذره‌ای{{ else }}Quantum many-body numerics{{ end }}</span>
         </span>
         <span class="focus-card-face focus-card-back">
-          <span class="focus-card-title">Quantum many-body numerics</span>
+          <span class="focus-card-title">{{ if $isFa }}محاسبات عددی در سامانه‌های کوانتومی بس‌ذره‌ای{{ else }}Quantum many-body numerics{{ end }}</span>
           <span class="focus-card-copy">
-            I use numerical tools such as quantum Monte Carlo, tensor networks, Gaussian methods, and high-performance simulation to study many-body systems.
+            {{ if $isFa }}
+              برای مطالعه‌ی سامانه‌های کوانتومی بس‌ذره‌ای، از ابزارهای عددی گوناگونی
+              استفاده می‌کنم؛ از جمله مونت‌کارلوی کوانتومی، شبکه‌های تانسوری، روش‌های
+              گاوسی و دیگر شبیه‌سازی‌های رایانه‌ای.
+            {{ else }}
+              I use numerical tools such as quantum Monte Carlo, tensor networks, Gaussian methods, and high-performance simulation to study many-body systems.
+            {{ end }}
           </span>
         </span>
       </span>
@@ -207,101 +229,162 @@
   </div>
 
   <p class="more-link">
-    <a href="{{ if $isFa }}/fa/research/{{ else }}/research/{{ end }}">Read more about my research →</a>
+    <a href="{{ if $isFa }}/fa/research/{{ else }}/research/{{ end }}">{{ if $isFa }}بیشتر درباره پژوهش من بخوانید ←{{ else }}Read more about my research →{{ end }}</a>
   </p>
 </section>
 
 <section class="section-block">
   <div class="section-header">
-    <p class="eyebrow">Papers</p>
-    <h2>Current Papers</h2>
+    <p class="eyebrow">{{ if $isFa }}نمایه{{ else }}Profile{{ end }}</p>
+    <h2>{{ if $isFa }}در یک نگاه{{ else }}At a Glance{{ end }}</h2>
+  </div>
+
+  <div class="theme-grid glance-grid">
+    <article class="theme-card path-card">
+      <div class="path-card-copy">
+        <h3>{{ if $isFa }}مسیر دانشگاهی{{ else }}Academic Path{{ end }}</h3>
+        <p>
+          {{ if $isFa }}
+            مسیر من در فیزیک از المپیاد فیزیک در دبیرستان شروع شد، در دانشگاه صنعتی شریف
+            ادامه پیدا کرد، از راه برنامه PSI به پریمیتر رسید، و حالا در همان‌جا به‌عنوان
+            دانشجوی دکتری ادامه دارد.
+          {{ else }}
+            I started physics through the Physics Olympiad in high school, continued at Sharif
+            University of Technology, came to Perimeter through the PSI master's program, and now
+            continue there as a PhD student.
+          {{ end }}
+        </p>
+      </div>
+
+      <div class="path-figure" aria-label="{{ if $isFa }}مسیر دانشگاهی از المپیاد فیزیک تا شریف، PSI و دکتری در پریمیتر{{ else }}Academic path from Physics Olympiad to Sharif, PSI, and PhD at Perimeter{{ end }}">
+        <svg viewBox="0 0 520 150" role="img">
+          <path class="path-line" d="M58 76h404"></path>
+          <g class="path-stop">
+            <circle cx="58" cy="76" r="13"></circle>
+            <text x="58" y="44">{{ if $isFa }}المپیاد{{ else }}Olympiad{{ end }}</text>
+            <text class="path-detail" x="58" y="116">{{ if $isFa }}دبیرستان{{ else }}high school{{ end }}</text>
+          </g>
+          <g class="path-stop">
+            <circle cx="194" cy="76" r="13"></circle>
+            <text x="194" y="44">{{ if $isFa }}شریف{{ else }}Sharif{{ end }}</text>
+            <text class="path-detail" x="194" y="116">{{ if $isFa }}کارشناسی فیزیک{{ else }}BSc physics{{ end }}</text>
+          </g>
+          <g class="path-stop">
+            <circle cx="326" cy="76" r="13"></circle>
+            <text x="326" y="44">PSI</text>
+            <text class="path-detail" x="326" y="116">{{ if $isFa }}کارشناسی ارشد{{ else }}MSc at PI{{ end }}</text>
+          </g>
+          <g class="path-stop">
+            <circle cx="462" cy="76" r="13"></circle>
+            <text x="462" y="44">{{ if $isFa }}پریمیتر{{ else }}Perimeter{{ end }}</text>
+            <text class="path-detail" x="462" y="116">{{ if $isFa }}دکتری{{ else }}PhD{{ end }}</text>
+          </g>
+        </svg>
+      </div>
+    </article>
+
+    <article class="theme-card">
+      <h3>{{ if $isFa }}روش‌ها{{ else }}Methods{{ end }}</h3>
+      <p>
+        {{ if $isFa }}
+          کار من ایده‌های تحلیلی را با ابزارهای عددی ترکیب می‌کند تا فیزیک اطلاعات و ماده
+          را بفهمم. از شبکه‌های تانسوری، مونت‌کارلوی کوانتومی، فرمالیسم‌های پایدارساز،
+          کلیفورد و گاوسی، و هر راه دیگری برای شبیه‌سازی کلاسیکی مسئله‌های سخت کوانتومی
+          استفاده می‌کنم.
+        {{ else }}
+          My work combines analytic ideas with numerical tools to understand the physics of
+          information and matter. I use tensor networks, quantum Monte Carlo, stabilizer,
+          Clifford, and Gaussian formalisms, along with other ways of classically simulating hard
+          quantum problems.
+        {{ end }}
+      </p>
+    </article>
+
+    <article class="theme-card">
+      <h3>{{ if $isFa }}آموزش و اجتماع علمی{{ else }}Teaching & Community{{ end }}</h3>
+      <p>
+        {{ if $isFa }}
+          آموزش همیشه بخش مهمی از مسیر من در فیزیک بوده است؛ از تدریس المپیاد گرفته تا
+          همراهی با دانشجویان در مؤسسه‌ی پریمیتر. برای من، آموزش فقط به حل کردن مسئله
+          خلاصه نمی‌شود؛ آن‌چه بیشتر برایم اهمیت دارد، کمک به دیدن ایده‌ی ساده و روشنی
+          است که پشت یک مسئله‌ی سخت پنهان شده است.
+        {{ else }}
+          Teaching has been a central part of my physics path, from Olympiad instruction to
+          mentoring students at Perimeter. I enjoy helping students find the simple idea behind a
+          difficult problem, and building communities where that kind of thinking can happen
+          naturally.
+        {{ end }}
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="section-block">
+  <div class="section-header">
+    <p class="eyebrow">{{ if $isFa }}مقاله‌ها{{ else }}Papers{{ end }}</p>
+    <h2>{{ if $isFa }}مقاله‌های اخیر{{ else }}Current Papers{{ end }}</h2>
   </div>
 
   <div class="home-paper-grid">
     <article class="home-paper-card">
       <span class="home-paper-number">01</span>
-      <span class="home-paper-meta">Preprint · 2026</span>
+      <span class="home-paper-meta">{{ if $isFa }}پیش‌چاپ · ۲۰۲۶{{ else }}Preprint · 2026{{ end }}</span>
       <h3>Unlearnable phases of matter</h3>
       <p>
-        With Tarun Advaith Kumar, Yijian Zou, Roger G. Melko, and Timothy H. Hsieh.
+        {{ if $isFa }}با Tarun Advaith Kumar، Yijian Zou، Roger G. Melko و Timothy H. Hsieh.{{ else }}With Tarun Advaith Kumar, Yijian Zou, Roger G. Melko, and Timothy H. Hsieh.{{ end }}
       </p>
       <a href="https://arxiv.org/abs/2602.11262">arXiv</a>
     </article>
 
     <article class="home-paper-card">
       <span class="home-paper-number">02</span>
-      <span class="home-paper-meta">Preprint · 2026</span>
+      <span class="home-paper-meta">{{ if $isFa }}پیش‌چاپ · ۲۰۲۶{{ else }}Preprint · 2026{{ end }}</span>
       <h3>Critical non-equilibrium phases from noisy topological memories</h3>
       <p>
-        With Subhayan Sahu, Jan Behrends, Benjamin Béri, and Timothy H. Hsieh.
+        {{ if $isFa }}با Subhayan Sahu، Jan Behrends، Benjamin Béri و Timothy H. Hsieh.{{ else }}With Subhayan Sahu, Jan Behrends, Benjamin Béri, and Timothy H. Hsieh.{{ end }}
       </p>
       <a href="https://arxiv.org/abs/2601.10792">arXiv</a>
     </article>
 
     <article class="home-paper-card">
       <span class="home-paper-number">03</span>
-      <span class="home-paper-meta">Preprint · 2025</span>
+      <span class="home-paper-meta">{{ if $isFa }}پیش‌چاپ · ۲۰۲۵{{ else }}Preprint · 2025{{ end }}</span>
       <h3>Symmetry enforces entanglement at high temperatures</h3>
       <p>
-        With Leonardo A. Lessa and Subhayan Sahu.
+        {{ if $isFa }}با Leonardo A. Lessa و Subhayan Sahu.{{ else }}With Leonardo A. Lessa and Subhayan Sahu.{{ end }}
       </p>
       <a href="https://arxiv.org/abs/2508.20166">arXiv</a>
     </article>
 
     <article class="home-paper-card">
       <span class="home-paper-number">04</span>
-      <span class="home-paper-meta">Preprint · 2025</span>
+      <span class="home-paper-meta">{{ if $isFa }}پیش‌چاپ · ۲۰۲۵{{ else }}Preprint · 2025{{ end }}</span>
       <h3>Extendibility of fermionic Gaussian states</h3>
       <p>
-        With Farzin Salek.
+        {{ if $isFa }}با Farzin Salek.{{ else }}With Farzin Salek.{{ end }}
       </p>
       <a href="https://arxiv.org/abs/2508.18532">arXiv</a>
     </article>
   </div>
 
   <p class="more-link">
-    <a href="{{ if $isFa }}/fa/papers/{{ else }}/papers/{{ end }}">View all papers →</a>
+    <a href="{{ if $isFa }}/fa/papers/{{ else }}/papers/{{ end }}">{{ if $isFa }}همه مقاله‌ها ←{{ else }}View all papers →{{ end }}</a>
   </p>
-</section>
-
-<section class="section-block">
-  <div class="section-header">
-    <p class="eyebrow">Profile</p>
-    <h2>At a Glance</h2>
-  </div>
-
-  <div class="theme-grid">
-    <article class="theme-card">
-      <h3>Education</h3>
-      <p>
-        PhD student at Perimeter Institute. MSc at Perimeter Institute.
-        BSc from Sharif University of Technology.
-      </p>
-    </article>
-
-    <article class="theme-card">
-      <h3>Computation</h3>
-      <p>
-        Numerical work with tensor-network methods, quantum Monte Carlo, stabilizer
-        methods, Gaussian formalisms, and high-performance computing.
-      </p>
-    </article>
-
-    <article class="theme-card">
-      <h3>Teaching & Community</h3>
-      <p>
-        I care about clear physics teaching, mentoring, and research community-building,
-        from Olympiad instruction to graduate reading groups and student projects.
-      </p>
-    </article>
-  </div>
 </section>
 
 <section class="contact-strip">
   <div>
-    <h2>Contact</h2>
+    <h2>{{ if $isFa }}تماس{{ else }}Contact{{ end }}</h2>
     <p>
-      For research discussions, seminars, or collaboration inquiries, feel free to reach out.
+      {{ if $isFa }}
+        از دریافت ایمیل، چه درباره‌ی موضوعات پژوهشی و چه غیرپژوهشی، استقبال می‌کنم.
+        می‌توانید هر فکر تازه یا جالبی را که در ذهن دارید، از تاریخ و سیاست گرفته تا
+        هوش مصنوعی و زبان‌شناسی، به این آدرس برایم بفرستید.
+      {{ else }}
+        I’d always be happy to receive physics problems, questions, or half-formed thoughts by
+        email. I also enjoy hearing about AI, history, languages, Middle East politics, or watching
+        an interesting video about cuneiform.
+      {{ end }}
     </p>
   </div>
 
