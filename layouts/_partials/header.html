@@ -60,26 +60,27 @@
                 
                 {{- if (not site.Params.disableLangToggle) }}
                     {{- $lang := .Lang}}
-                    {{- with site.Home.Translations }}
                     {{- $separator := or $label_text (not site.Params.disableThemeToggle)}}
                     {{- if $separator }}<span class="nav-sep">|</span>{{ end }}
                     <ul class="lang-menu">
-                        {{- range . -}}
-                        {{- if ne $lang .Lang }}
+                        {{- if eq $lang "fa" }}
                         <li>
-                            <a href="{{- .RelPermalink -}}" title="{{ .Language.Params.languageAltTitle | default (.Language.LanguageName | emojify) | default (.Lang | title) }}"
-                                aria-label="{{ .Language.LanguageName | default (.Lang | title) }}">
-                                {{- if (and site.Params.displayFullLangName (.Language.LanguageName)) }}
-                                {{- .Language.LanguageName | emojify -}}
-                                {{- else }}
-                                {{- .Lang | title -}}
-                                {{- end -}}
+                            {{- $target := strings.TrimPrefix "/fa" .RelPermalink }}
+                            {{- if eq $target "" }}{{ $target = "/" }}{{ end }}
+                            <a href="{{- $target -}}" title="EN" aria-label="EN">
+                                EN
                             </a>
                         </li>
-                        {{- end -}}
-                        {{- end}}
+                        {{- else }}
+                        <li>
+                            {{- $target := cond (eq .RelPermalink "/") "/fa/" (printf "/fa%s" .RelPermalink) }}
+                            {{- if and .IsPage (eq .Section "notes") }}{{ $target = "/fa/notes/" }}{{ end }}
+                            <a href="{{- $target -}}" title="فارسی" aria-label="فارسی">
+                                فارسی
+                            </a>
+                        </li>
+                        {{- end }}
                     </ul>
-                    {{- end }}
                 {{- end }}
             </div>
             {{- end }}

@@ -1,0 +1,45 @@
+{{- define "main" }}
+
+{{- $isFa := eq .Lang "fa" }}
+{{- $notes := .RegularPages.ByDate.Reverse }}
+
+<section class="notes-page">
+  <header class="page-header notes-header">
+    {{- partial "breadcrumbs.html" . }}
+    <p class="eyebrow">{{ if $isFa }}یادداشت‌ها{{ else }}Notes{{ end }}</p>
+    <h1>{{ .Title }}</h1>
+    <div class="post-description">
+      {{ if $isFa }}
+        چند یادداشت کوتاه و آزاد درباره چیزهایی که دوست دارم روشن‌تر به آن‌ها فکر کنم.
+      {{ else }}
+        Short, informal notes on ideas I want to keep thinking through.
+      {{ end }}
+    </div>
+  </header>
+
+  {{- if $notes }}
+  <div class="notes-list">
+    {{- range $notes }}
+    <article>
+      <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{- with .Description }}
+      <p>{{ . }}</p>
+      {{- end }}
+    </article>
+    {{- end }}
+  </div>
+  {{- else }}
+  <div class="empty-notes">
+    <p>
+      {{ if $isFa }}
+        هنوز یادداشتی منتشر نکرده‌ام.
+      {{ else }}
+        No notes published yet.
+      {{ end }}
+    </p>
+  </div>
+  {{- end }}
+</section>
+
+{{- end }}
