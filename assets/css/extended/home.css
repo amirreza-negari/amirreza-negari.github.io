@@ -425,8 +425,8 @@ html[lang="fa"] .profile-photo {
   inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: flex-start;
+  gap: 0.85rem;
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 0.9rem;
@@ -457,10 +457,23 @@ html[lang="fa"] .profile-photo {
 .focus-card-title {
   display: block;
   font-family: var(--font-display);
-  font-size: clamp(1.1rem, 1.5vw, 1.42rem);
+  font-size: clamp(1.02rem, 1.35vw, 1.28rem);
   font-weight: 650;
-  line-height: 1.05;
+  line-height: 1.16;
   color: var(--primary);
+  max-width: 14rem;
+  margin: 0 auto;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.focus-card-back .focus-card-title {
+  margin-inline: 0;
+  text-align: left;
+}
+
+html[lang="fa"] .focus-card-back .focus-card-title {
+  text-align: right;
 }
 
 .focus-card-copy {
@@ -901,30 +914,34 @@ html[lang="fa"] .profile-photo {
   text-anchor: middle;
 }
 
-.research-figure .coin-flip-icon {
-  width: min(82%, 250px);
+.research-figure .hubbard-lattice path {
+  stroke: color-mix(in srgb, var(--primary) 24%, var(--secondary) 76%);
+  stroke-width: 1.45;
+  opacity: 0.62;
 }
 
-.research-figure .coin-flip-line,
-.research-figure .coin-flip-thin,
-.research-figure .ket-frame {
-  fill: none;
+.research-figure .hubbard-sites circle {
+  fill: var(--entry);
+  stroke: color-mix(in srgb, var(--primary) 40%, var(--secondary) 60%);
+  stroke-width: 1.8;
+}
+
+.research-figure .hubbard-sites .occupied {
+  fill: var(--primary);
+  stroke: var(--entry);
+  stroke-width: 2.1;
+}
+
+.research-figure .hubbard-sites .doublon {
+  fill: var(--entry);
   stroke: var(--primary);
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  stroke-width: 2.5;
 }
 
-.research-figure .coin-flip-line {
-  stroke-width: 16;
-}
-
-.research-figure .coin-flip-thin {
-  stroke-width: 12;
-}
-
-.research-figure .ket-frame {
-  stroke-width: 14;
-  opacity: 0.52;
+.research-figure .hubbard-hops path {
+  stroke: var(--primary);
+  stroke-width: 2.35;
+  opacity: 0.88;
 }
 
 .research-body {

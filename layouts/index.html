@@ -189,31 +189,33 @@
     </label>
 
     <label class="focus-flip-card">
-      <input class="focus-card-toggle" type="checkbox" aria-label="Flip quantum many-body numerics card">
+      <input class="focus-card-toggle" type="checkbox" aria-label="Flip simulations of strongly correlated systems card">
       <span class="focus-card-inner">
         <span class="focus-card-face focus-card-front">
           <span class="research-figure focus-card-figure" aria-hidden="true">
-            <svg class="coin-flip-icon" viewBox="0 0 800 800">
-              <path class="ket-frame" d="M125 150v500"></path>
-              <path class="ket-frame" d="M660 155l95 245-95 245"></path>
-              <rect x="205" y="500" width="72" height="150" rx="15" class="coin-flip-line"></rect>
-              <path class="coin-flip-line" d="M277 535 C318 510 350 462 365 398 C372 365 400 362 414 388 C430 419 413 468 386 506 L470 492 C505 487 531 504 532 530 C556 539 552 572 520 581 C533 604 508 629 475 621 C462 650 406 657 344 642 C313 635 294 623 277 616"></path>
-              <path class="coin-flip-thin" d="M386 506 C413 491 439 477 469 469"></path>
-              <path class="coin-flip-thin" d="M471 532 C500 526 522 532 532 548"></path>
-              <path class="coin-flip-thin" d="M466 577 C493 571 513 576 520 592"></path>
-              <path class="coin-flip-thin" d="M449 617 C471 614 489 617 499 628"></path>
-              <path class="coin-flip-thin" d="M462 346 C485 303 522 274 565 257"></path>
-              <path class="coin-flip-thin" d="M505 365 C528 321 562 294 605 277"></path>
-              <g transform="rotate(-15 565 225)">
-                <ellipse cx="565" cy="225" rx="70" ry="32" class="coin-flip-line"></ellipse>
-                <path class="coin-flip-thin" d="M497 235 C528 263 601 263 633 235"></path>
+            <svg viewBox="0 0 220 150">
+              <g class="hubbard-lattice">
+                <path d="M54 34h112M54 58h112M54 82h112M54 106h112"></path>
+                <path d="M54 34v72M82 34v72M110 34v72M138 34v72M166 34v72"></path>
+              </g>
+              <g class="hubbard-sites">
+                <circle cx="54" cy="34" r="5"></circle><circle cx="82" cy="34" r="5"></circle><circle cx="110" cy="34" r="5"></circle><circle cx="138" cy="34" r="5"></circle><circle cx="166" cy="34" r="5"></circle>
+                <circle cx="54" cy="58" r="5"></circle><circle class="occupied" cx="82" cy="58" r="5"></circle><circle cx="110" cy="58" r="5"></circle><circle class="occupied" cx="138" cy="58" r="5"></circle><circle cx="166" cy="58" r="5"></circle>
+                <circle class="occupied" cx="54" cy="82" r="5"></circle><circle cx="82" cy="82" r="5"></circle><circle class="doublon" cx="110" cy="82" r="7"></circle><circle cx="138" cy="82" r="5"></circle><circle class="occupied" cx="166" cy="82" r="5"></circle>
+                <circle cx="54" cy="106" r="5"></circle><circle class="occupied" cx="82" cy="106" r="5"></circle><circle cx="110" cy="106" r="5"></circle><circle class="occupied" cx="138" cy="106" r="5"></circle><circle cx="166" cy="106" r="5"></circle>
+              </g>
+              <g class="hubbard-hops">
+                <path d="M82 58c14-12 42-12 56 0"></path>
+                <path d="M54 82c18 14 38 14 56 0"></path>
+                <path d="M110 82c16 13 40 13 56 0"></path>
+                <path d="M82 106c14 11 42 11 56 0"></path>
               </g>
             </svg>
           </span>
-          <span class="focus-card-title">{{ if $isFa }}محاسبات عددی در سامانه‌های کوانتومی بس‌ذره‌ای{{ else }}Quantum many-body numerics{{ end }}</span>
+          <span class="focus-card-title">{{ if $isFa }}شبیه‌سازی سامانه‌های قویاً هم‌بسته{{ else }}Simulations of strongly correlated systems{{ end }}</span>
         </span>
         <span class="focus-card-face focus-card-back">
-          <span class="focus-card-title">{{ if $isFa }}محاسبات عددی در سامانه‌های کوانتومی بس‌ذره‌ای{{ else }}Quantum many-body numerics{{ end }}</span>
+          <span class="focus-card-title">{{ if $isFa }}شبیه‌سازی سامانه‌های قویاً هم‌بسته{{ else }}Simulations of strongly correlated systems{{ end }}</span>
           <span class="focus-card-copy">
             {{ if $isFa }}
               برای مطالعه‌ی سامانه‌های کوانتومی بس‌ذره‌ای، از ابزارهای عددی گوناگونی
