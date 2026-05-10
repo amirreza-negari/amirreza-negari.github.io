@@ -811,6 +811,34 @@ html[lang="fa"] .focus-card-back .focus-card-title {
   margin: 0.55rem 0 0;
 }
 
+.post-content blockquote {
+  max-width: 34rem;
+  margin: 2rem auto;
+  padding: 1.25rem 1.5rem;
+  border-inline-start: 0;
+  border-inline-end: 2px solid var(--primary);
+  border-radius: 8px;
+  background: var(--entry);
+  text-align: center;
+}
+
+.post-content blockquote p {
+  margin: 0.25rem 0;
+  color: var(--primary);
+  line-height: 2.1;
+}
+
+html[lang="fa"] .post-content blockquote p:first-child {
+  word-spacing: 0.45rem;
+  white-space: normal;
+}
+
+html[lang="fa"] .post-content blockquote p:last-child {
+  margin-top: 0.75rem;
+  color: var(--secondary);
+  font-size: 0.92rem;
+}
+
 .research-page {
   max-width: 1080px;
   margin: 0 auto;
