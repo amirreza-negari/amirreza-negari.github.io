@@ -32,8 +32,7 @@ region. One way to remember this is:
 A \longleftrightarrow B \longleftrightarrow C .
 \]
 
-This is the kind of small fact that can be useful to keep in a note: short enough to
-remember, but precise enough to reuse later.
+This is the kind of small fact that can be useful to keep in a note.
 
 ## How I might use this template
 
