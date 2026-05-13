@@ -1,4 +1,5 @@
 baseURL = "https://amirreza-negari.github.io/"
+enableRobotsTXT = true
 title = "Amirreza Negari"
 theme = "PaperMod"
 
@@ -6,7 +7,11 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
 [params]
-  env = "development"
+  env = "production"
+  author = "Amirreza Negari"
+  description = "Amirreza Negari is a theoretical physicist and PhD student at Perimeter Institute working on quantum information, quantum matter, quantum error correction, entanglement, and numerical methods."
+  keywords = ["Amirreza Negari", "Amir-Reza Negari", "theoretical physicist", "Perimeter Institute", "quantum information", "quantum matter", "quantum error correction", "entanglement theory"]
+  images = ["/images/profile/amirreza-negari-profile-photo.jpg"]
   defaultTheme = "dark"
   label.text = "Home"
   label.iconSVG = """<svg class="home-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10.5 9-7 9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-6h5v6"/></svg>"""
@@ -17,6 +22,17 @@ defaultContentLanguageInSubdir = false
   ShowCodeCopyButtons = true
   ShowToc = true
   displayFullLangName = true
+
+[params.schema]
+  publisherType = "Person"
+  sameAs = [
+    "https://scholar.google.com/citations?user=_kyHGUcAAAAJ&hl=en",
+    "https://orcid.org/orcid-search/search?searchQuery=%22Amir-Reza%20Negari%22",
+    "https://inspirehep.net/authors/2851625?ui-citation-summary=true",
+    "https://github.com/Amirreza-negari",
+    "https://perimeterinstitute.ca/people/amirreza-negari",
+    "https://arxiv.org/search/?query=Amir-Reza+Negari&searchtype=author"
+  ]
 
 [markup]
   [markup.goldmark]
@@ -72,7 +88,13 @@ defaultContentLanguageInSubdir = false
     direction = "rtl"
     contentDir = "content/fa"
     weight = 2
-    title = "Amirreza Negari"
+    title = "امیررضا نگاری"
+
+    [languages.fa.params]
+      author = "امیررضا نگاری"
+      description = "امیررضا نگاری فیزیک‌دان نظری و دانشجوی دکتری در موسسه فیزیک نظری پریمیتر است و روی اطلاعات کوانتومی، ماده کوانتومی، تصحیح خطای کوانتومی و نظریه درهم‌تنیدگی پژوهش می‌کند."
+      keywords = ["امیررضا نگاری", "امیر رضا نگاری", "امیر-رضا نگاری", "فیزیک‌دان نظری", "موسسه فیزیک نظری پریمیتر", "اطلاعات کوانتومی", "ماده کوانتومی", "تصحیح خطای کوانتومی", "درهم‌تنیدگی"]
+      images = ["/images/profile/amirreza-negari-profile-photo.jpg"]
 
     [[languages.fa.menu.main]]
       identifier = "research"

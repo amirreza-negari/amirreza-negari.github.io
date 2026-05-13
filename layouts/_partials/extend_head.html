@@ -1,3 +1,78 @@
+{{- if .IsHome }}
+{{- $isFa := eq .Lang "fa" }}
+{{- $imageURL := "/images/profile/amirreza-negari-profile-photo.jpg" | absURL }}
+{{- $imageAlt := cond $isFa "امیررضا نگاری، فیزیک‌دان نظری و دانشجوی دکتری در موسسه فیزیک نظری پریمیتر" "Amirreza Negari, theoretical physicist and PhD student at Perimeter Institute" }}
+{{- $siteName := cond $isFa "امیررضا نگاری" "Amirreza Negari" }}
+{{- $description := cond $isFa "امیررضا نگاری فیزیک‌دان نظری و دانشجوی دکتری در موسسه فیزیک نظری پریمیتر است و روی اطلاعات کوانتومی، ماده کوانتومی، تصحیح خطای کوانتومی و نظریه درهم‌تنیدگی پژوهش می‌کند." "Amirreza Negari is a theoretical physicist and PhD student at Perimeter Institute working on quantum information, quantum matter, quantum error correction, entanglement, and numerical methods." }}
+<meta property="og:image:alt" content="{{ $imageAlt }}">
+<meta name="twitter:image:alt" content="{{ $imageAlt }}">
+<link rel="me" href="https://scholar.google.com/citations?user=_kyHGUcAAAAJ&amp;hl=en">
+<link rel="me" href="https://inspirehep.net/authors/2851625?ui-citation-summary=true">
+<link rel="me" href="https://github.com/Amirreza-negari">
+<link rel="me" href="https://perimeterinstitute.ca/people/amirreza-negari">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ $siteName }},
+  "alternateName": ["Amirreza Negari", "Amir-Reza Negari", "امیررضا نگاری", "امیر رضا نگاری"],
+  "url": {{ .Permalink }},
+  "inLanguage": {{ .Lang }},
+  "publisher": {
+    "@type": "Person",
+    "@id": "{{ .Permalink }}#amirreza-negari",
+    "name": {{ $siteName }}
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": {{ .Permalink }},
+  "inLanguage": {{ .Lang }},
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "{{ .Permalink }}#amirreza-negari",
+    "name": {{ $siteName }},
+    "alternateName": ["Amirreza Negari", "Amir-Reza Negari", "امیررضا نگاری", "امیر رضا نگاری"],
+    "description": {{ $description }},
+    "image": {{ $imageURL }},
+    "jobTitle": {{ cond $isFa "دانشجوی دکتری فیزیک نظری" "PhD student in theoretical physics" }},
+    "affiliation": {
+      "@type": "Organization",
+      "name": {{ cond $isFa "موسسه فیزیک نظری پریمیتر" "Perimeter Institute for Theoretical Physics" }},
+      "url": "https://perimeterinstitute.ca/"
+    },
+    "knowsAbout": {{ if $isFa }}["اطلاعات کوانتومی", "ماده کوانتومی", "تصحیح خطای کوانتومی", "نظریه درهم‌تنیدگی", "سامانه‌های کوانتومی بس‌ذره‌ای"]{{ else }}["quantum information", "quantum matter", "quantum error correction", "entanglement theory", "quantum many-body systems", "numerical methods"]{{ end }},
+    "sameAs": [
+      "https://scholar.google.com/citations?user=_kyHGUcAAAAJ&hl=en",
+      "https://inspirehep.net/authors/2851625?ui-citation-summary=true",
+      "https://github.com/Amirreza-negari",
+      "https://perimeterinstitute.ca/people/amirreza-negari",
+      "https://arxiv.org/search/?query=Amir-Reza+Negari&searchtype=author"
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "contentUrl": {{ $imageURL }},
+  "url": {{ $imageURL }},
+  "name": {{ cond $isFa "عکس امیررضا نگاری" "Amirreza Negari profile photo" }},
+  "caption": {{ $imageAlt }},
+  "inLanguage": {{ .Lang }},
+  "representativeOfPage": true,
+  "creator": {
+    "@type": "Person",
+    "@id": "{{ .Permalink }}#amirreza-negari",
+    "name": {{ $siteName }}
+  }
+}
+</script>
+{{- end }}
 {{- if .Param "math" }}
 <script>
   window.MathJax = {
